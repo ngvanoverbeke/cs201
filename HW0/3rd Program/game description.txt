@@ -1,0 +1,5 @@
+Master the art of destruction and gadgetry in Tom Clancy’s Rainbow Six Siege*.
+Face intense close quarters combat, high lethality, tactical decision making, team play and explosive action within every moment.
+Experience a new era of fierce firefights and expert strategy born from the rich legacy of past Tom Clancy's Rainbow Six games.
+
+*written in c++
