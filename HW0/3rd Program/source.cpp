@@ -1,12 +1,12 @@
 // Nathan VanOverbeke
 // cs201
 // 9/3/2019
+// This is my 3rd program that simply prints a description of my favorite game, Rainbow Six Seige. Credit to the Steam market page for the description
 
 #include<iostream>
 
 using namespace std;
 
-// this is my main and only funtion
 int main()
 {
     // I used empty print lines for ease of reading on output

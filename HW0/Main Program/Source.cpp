@@ -1,12 +1,11 @@
 // Nathan VanOverbeke
 // cs201
 // 9/3/2019
+// This is the main program of HW0; it simply plrints the given text 5 times
 
 #include <iostream>
 
 using namespace std;
-
-    // This is my main and only function
     
 int main()
 {
