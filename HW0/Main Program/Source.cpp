@@ -9,12 +9,14 @@ using namespace std;
     
 int main()
 {
-    // each of the following lines prints the same text. I would have used a repeating loop, though for a program this short I felt copying the same line would be more simple
+    // I used a simple while loop instead of copy/pasting "Hello world" like I did in the original version. It is much easier to change the number of times or what is printed while using this design
+    
+    int n = 0;
 
-    cout<<"Hello world"<<endl;
-    cout<<"Hello world"<<endl;
-    cout<<"Hello world"<<endl;
-    cout<<"Hello world"<<endl;
-    cout<<"Hello world"<<endl;
+    while (n <= 4)
+    {
+        cout<<"Hello world"<<endl;
+        n++;
+    }
     return 0;
 }
