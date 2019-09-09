@@ -7,23 +7,23 @@
 
 using namespace std;
 
+// m will be the value (in miles) the user inputs to be converted
 double m;
+
+// k (kilometers) will be the output of the converted value
 double k;
-int r;
+
 int main() {
     start:
     cout << "Please enter the number of miles you would like to convert" << endl;
+    
+    // recieves user input
     cin>> m;
-    k = m * 1.609344;
-    cout << k << endl;
-    cout << "would you like to convert another? Enter 1 for yes or 2 for no." << endl;
-    cin>> r;
-    if (r = 1){
-        goto start;
-    }
 
-    else {
-        exit(EXIT_SUCCESS);
-    }
+    // caclulates the conversion
+    k = m * 1.609344;
+
+    // prints out the converted value
+    cout << k << endl;
 
 }
