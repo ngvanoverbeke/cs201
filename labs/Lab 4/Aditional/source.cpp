@@ -7,36 +7,33 @@
 
 using namespace std;
 
-int n = 1;
-
 int main() {
     
-    while (n <= 100)
-    {    
-        if (n % 3 == 0)
-        {
+    for (int n = 1; n <= 100; n++)
+    {
+        {    
+            if (n % 3 == 0)
+            {
+                if (n % 5 == 0)
+                {
+                cout << "fizz buzz" << endl;
+                }
+
+                else{
+                cout << "fizz" << endl;
+                }
+            }
+            
             if (n % 5 == 0)
             {
-            cout << "fizz buzz" << endl;
+                cout << "buzz" << endl;
             }
-
-            else{
-            cout << "fizz" << endl;
-            n++;
+            
+        
+            else
+            {
+                cout << n << endl;
             }
-        }
-        
-        if (n % 5 == 0)
-        {
-            cout << "buzz" << endl;
-            n++;
-        }
-        
-    
-        else
-        {
-            cout << n << endl;
-            n++;
         }
     }
 }
