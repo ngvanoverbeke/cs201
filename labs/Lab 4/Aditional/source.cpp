@@ -15,8 +15,15 @@ int main() {
     {    
         if (n % 3 == 0)
         {
+            if (n % 5 == 0)
+            {
+            cout << "fizz buzz" << endl;
+            }
+
+            else{
             cout << "fizz" << endl;
             n++;
+            }
         }
         
         if (n % 5 == 0)
