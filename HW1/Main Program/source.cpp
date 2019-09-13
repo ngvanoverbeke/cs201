@@ -7,27 +7,34 @@
 
 using namespace std;
 
-int d = 0;
-int p = 0;
+int i = 1; // input
+int h = 0; // height
+int w = 0; // width
 
 int main() {
-    cin >> d;
+    cout << "Please enter the size of the diamond you would like to create" << endl;
+    cin >> i;
 
-    if (d < 1)
+    if (i < 1)
     {
         cout << "Sorry, please try a positive number" << endl;
+        return 0;
     }
 
     else
     {
-        while (p < d, p++)
+        while ( i >= h )
         {
-            
+            while (h > w)
+            {
+                cout << "#" ;
+                w++;
+            }   
+            cout << endl;
+            h++;
         }
-        
     }
     
-
-
+    return 0;
     
 }
