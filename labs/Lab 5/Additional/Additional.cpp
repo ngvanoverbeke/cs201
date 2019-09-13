@@ -6,8 +6,13 @@
 #include <iostream>
 
 int main() {
+    // promts user to input a value
     std::cout << "Please enter a number:     ";
+
+    // initialize the value
     int n;
+
+    // initialize the value
     std::cin >> n;
     
     if (n == 1)
