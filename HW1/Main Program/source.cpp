@@ -8,8 +8,7 @@
 using namespace std;
 
 int i = 1; // input
-int h = 0; // height
-int w = 0; // width
+int r = 1;
 
 int main() {
     cout << "Please enter the size of the diamond you would like to create" << endl;
@@ -23,18 +22,5 @@ int main() {
 
     else
     {
-        while ( i >= h )
-        {
-            while (h > w)
-            {
-                cout << "#" ;
-                w++;
-            }   
-            cout << endl;
-            h++;
-        }
+        
     }
-    
-    return 0;
-    
-}
