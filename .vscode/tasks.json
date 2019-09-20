@@ -6,7 +6,7 @@
             "command": "C:\\Program Files\\Haskell Platform\\8.6.5\\mingw\\bin\\g++.exe",
             "args": [
                 "-g",
-                "${file}",
+                "${fileDirname}}\\*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
