@@ -4,6 +4,7 @@
 // This program will use a switch statement to pair a given number with it's corresponding day of the week... or not
 
 #include <iostream>
+#include <string>
 
 int main() {
     // promts user to input a value
@@ -30,5 +31,4 @@ int main() {
         std::cout << "Not monday, Tuesday, or Wednesday!";
         break;
     }
-
 }
