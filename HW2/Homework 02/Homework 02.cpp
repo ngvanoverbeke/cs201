@@ -2,14 +2,14 @@
 // CS 201
 // 9/22/2019
 // Homework 02
-// 
+// This program will take and store 10 names input by the user, it will then completely reverse the names order and their spelling
 
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 
-
+//takes input of the names by the user; stores them as a string before pushing the string into a vector
 std::vector<std::string> inputNames()
 {
 	std::vector<std::string> names;
@@ -25,6 +25,7 @@ std::vector<std::string> inputNames()
 	return names;
 }
 
+// Searches the vector for a name input by the user, it then tells the user how many times the name appeared (using correct grammr), or that it didn't if the name was not found.
 void nameSearch(std::vector<std::string> x) {
 	std::vector<std::string> namelist = x;
 	std::string localName;
@@ -33,12 +34,14 @@ void nameSearch(std::vector<std::string> x) {
 
 	int appears = 0;
 
+	// checks for number of appearences
 	for (int i = 0; i < 10; i++) {
 		if (localName == namelist.at(i)) {
 			appears++;
 		}
 	}
 
+	//grammatically correct user outputs
 	if (appears > 1) {
 		std::cout << "That name apears " << appears << " times" << std::endl;
 	}
@@ -50,6 +53,7 @@ void nameSearch(std::vector<std::string> x) {
 	}
 }
 
+// this will print all of the names in the given vector
 void printNames(std::vector<std::string> x) {
 	std::vector<std::string> namelist = x;
 	for (int i = 0; i < 10; i++) {
@@ -58,6 +62,7 @@ void printNames(std::vector<std::string> x) {
 	}
 }
 
+// takes previous vector, reverses spelling of each string, then reverses the order, all before printing the new vector
 void reverseOrder(std::vector<std::string> x) {
 	std::vector<std::string> namelist = x;
 	std::vector<std::string> reversedSpelling;
