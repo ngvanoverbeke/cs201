@@ -1,9 +1,35 @@
 {
+    "version": "2.0.0",
     "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-o",
+                "a.exe",
+                "*.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "type": "shell",
+            "label": "pause",
+            "command": "pause"
+        },
         {
             "type": "shell",
             "label": "g++.exe build active file",
-            "command": "C:\\Program Files\\Haskell Platform\\8.6.5\\mingw\\bin\\g++.exe",
+            "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${fileDirname}}\\*.cpp",
@@ -11,9 +37,8 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "C:\\Program Files\\Haskell Platform\\8.6.5\\mingw\\bin"
+                "cwd": "C:\\MinGW\\bin"
             }
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
