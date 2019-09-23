@@ -5,10 +5,11 @@
 
 #include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
 
-using namespace std;
+using std::cout;
+using std::vector;
+using std::cin;
+using std::endl;
 
 vector<int> coinSlot() {
 	vector<int> coins;
