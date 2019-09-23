@@ -54,9 +54,42 @@ void printNames(std::vector<std::string> x) {
 	std::vector<std::string> namelist = x;
 	for (int i = 0; i < 10; i++) {
 		std::cout << namelist.at(i);
+		std::cout << std::endl;
 	}
 }
 
+void reverseOrder(std::vector<std::string> x) {
+	std::vector<std::string> namelist = x;
+	std::vector<std::string> reversedSpelling;
+
+	int y;
+	std::string normal;
+	std::string temporary;
+
+	for (int i = 0; i < 10; i++){
+		normal = namelist.at(i);
+
+		y = normal.size();
+
+		temporary.resize(y);
+
+		while (y > 0) {
+			temporary.at(y - 1) = normal.at(normal.size() - y);
+			--y;
+		}
+		reversedSpelling.push_back(temporary);		
+
+	}
+	
+	
+	std::reverse(reversedSpelling.begin(), reversedSpelling.end());
+	std::cout << "Now that list backwards is:	" << std::endl;
+
+	for (std::vector<std::string>::iterator rev = reversedSpelling.begin(); rev != reversedSpelling.end(); ++rev)
+		std::cout << ' ' << *rev << std::endl;
+
+	
+}
 
 
 int main(int argc, char **argv)
@@ -68,6 +101,7 @@ int main(int argc, char **argv)
 
 	printNames(namelist);
 
+	reverseOrder(namelist);
 
 	return 0;
 
