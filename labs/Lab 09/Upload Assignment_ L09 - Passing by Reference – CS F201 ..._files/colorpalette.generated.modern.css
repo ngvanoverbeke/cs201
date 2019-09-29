@@ -1,0 +1,678 @@
+
+
+/* === UAF "MODERN" color palette =========================================== */
+
+
+/* Show Customization Properties Options */
+#controlPanelPalette_contents .submenu a[title="Properties"] {
+    display: block;
+}
+
+/* Show Course Availability Option if they Get there */
+form[action="/webapps/blackboard/execute/cp/courseProperties?dispatch=saveProperties"] #step3{
+    display:block;
+}
+
+/* No Change User Availability Option */
+.cmdiv a#cp_course_availability {
+    display:block;
+}
+
+.testOptions #stepcontent2 ol li:nth-of-type(5) {
+    display: none;
+}
+
+a,
+.blockGroups .itemHead {
+    color: #719949;
+    border-bottom-color: #719949;
+}
+
+a:active {
+    border: none;
+    outline: none;
+}
+
+/* Fix Spacing in content areas */
+.vtbegenerated p{
+    margin-bottom: 1em !important;
+    position: unset !important;
+}
+
+/*Workarounds*/
+/*Test timerworkaround so it floats instead of scrolls off screen*/ 
+/*.assessmentPortlet, id.topbar {
+position: fixed!important;
+left: 253px!important;
+} */
+
+.lock-unlock-toggle{
+    display:inline-block;
+}
+
+.course-availability-button:hover:after{
+    left: auto;
+    right: auto;
+}
+
+/* TOP FRAME TABS
+   ================================================== */
+
+.topTabs .tabWrapper-right {
+    height: auto;
+}
+.appTabs td {
+    padding-bottom: 0px !important;
+}
+
+/* Active tabs */
+
+.appTabs .active a .hideoff, .appTabs .active a:hover .hideoff, .appTabs .active a:focus .hideoff {
+    background: transparent none repeat scroll 0 0;
+    border-bottom-color: #FFFFFF;
+    color: #555;
+    font: 500 1em Helvetica,Arial,sans-serif;
+    text-shadow: 0 0 6px #fff;
+}
+
+.appTabs td.active {
+    border-bottom: 3px solid #ffcd00;
+}
+
+#topTabActive,
+.appTabs .active a,
+.appTabs .active a:hover,
+.appTabs .active a:hover span,
+.topTabs-compact .appTabs .active a,
+.topTabs-compact .appTabs .active a:hover,
+.appTabs .active a:focus,
+.appTabs .active a:focus span,
+.topTabs-compact .appTabs .active a:focus {
+    font: 500 1em Helvetica,Arial,sans-serif;
+    color: #ffcd00;
+    text-shadow: 0 0 6px #000;
+    background: transparent none repeat scroll 0 0;
+    border-color:transparent none repeat scroll 0 0;
+}
+
+/* Idle Tabs */
+
+#topTabActive, .appTabs .active a {
+    border: 0 none;
+}
+
+#topTab, .appTabs a, .topTabs-compact .appTabs a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: white;
+    font: 500 1em Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+
+.appTabs a:hover, .appTabs a:hover span, .topTabs-compact .appTabs a:hover, .appTabs a:focus, .appTabs a:focus span, .topTabs-compact .appTabs a:focus {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 0 none transparent;
+    border-color: transparent;
+    color: #ffc425;
+    font: 500 1em Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+
+#topFrame, .bgBanner {
+    background-color:#236192;
+    background: url(../banner-bg.jpg) repeat-x 0 0/contain, #236192;
+    color: #FFFFFF;
+    border-bottom: 0px;
+    text-shadow: 1px 1px 1px #333333;
+
+
+
+}
+
+/* ::::::::::::: banner MAU logo ::::::::  */
+.bannerImage {
+    background: transparent url("../logouaf-text.png") no-repeat scroll 2rem 1rem / 394px 60px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    height: 90px;
+    max-height: 80px !important;
+    padding-left: 430px;
+    width: 430px;
+}
+
+/* #quick_links_wrap a {
+    display: none;
+} */
+
+/* BODY
+   ================================================== */
+
+/* @branding -- do not remove */
+
+.appTabs input:focus, .appTabs button:focus, .appTabs select:focus, .appTabs a:focus, .global-nav-bar input:focus, .global-nav-bar button:focus, .global-nav-bar select:focus, .global-nav-bar a:focus, .mybb-tools input:focus, .mybb-tools button:focus, .mybb-tools select:focus, .mybb-tools a:focus, .mybb-div .side-nav input:focus, .mybb-div .side-nav button:focus, .mybb-div .side-nav select:focus, .mybb-div .side-nav a:focus, .navPalette input:focus, .navPalette button:focus, .navPalette select:focus, .navPalette a:focus, .gradeHeader input:focus, .gradeHeader button:focus, .gradeHeader select:focus, .gradeHeader a:focus, .gradingPanelHeader input:focus, .gradingPanelHeader button:focus, .gradingPanelHeader select:focus, .gradingPanelHeader a:focus, .inlineGrader .resizeControls input:focus, .inlineGrader .resizeControls button:focus, .inlineGrader .resizeControls select:focus, .inlineGrader .resizeControls a:focus {
+    outline: 2px solid #ffc425;
+}
+
+/*html{
+    background: url(/branding/colorpalettes/uaf_brand/uaf_content.png) fixed no-repeat bottom right, url(/branding/colorpalettes/uaf_brand/burlap.jpg) fixed no-repeat 0 0/cover;
+}*/
+
+/*#contentFrame, #schemePreview, .schemePreviewBody, body {
+    background: transparent;
+}*/
+
+.breadcrumbs,
+body.wizardBody .containerWizard,
+.paneTabs {
+    border-color: #236192;
+    background: #EFDBB2;
+}
+
+.paneTabs .active a:before {
+    border-bottom-color: #719949;
+}
+
+.paneTabs .active a:after {
+    border-bottom-color: #9ace56;
+}
+
+.paneTabs ul li a,
+.paneTabs .external a,
+.paneTabs .personal a {
+    border-color: #719949;
+}
+
+.paneTabs .active a {
+    color: #719949;
+    text-shadow: none;
+}
+.paneTabs .active a:hover {
+    color: #719949;
+    text-shadow: none;
+}
+
+.paneTabs a{
+    color:#FFF;
+}
+
+.breadcrumbs a {
+    /*color: #000*/
+}
+
+.breadcrumbs a:hover {
+
+}
+
+/* BREADCRUMBS
+   ================================================== */
+.path .root,
+.simplePath .root,
+.theme-switch {
+    border-right-color: #719949;
+}
+
+.path li.contextPath:last-child {
+    color: #333;
+}
+
+.path .root a:before,
+.simplePath .root a:before {
+    color: #719949;
+}
+
+.path li.placeholder {
+    color: #333;
+}
+
+.path .placeholder, .simplePath .placeholder {
+    color: #333;
+}
+
+.breadcrumbs .path a {
+    color: #719949;
+}
+
+li.path  {
+    color:#333;
+}
+
+.path, .simplePath {
+    color:#333;
+}
+
+.switcherLabel {
+    color:#333;
+}
+
+/* Line next to theme switcher */
+.path .root,
+.simplePath .root,
+.theme-switch {
+    border-right-color: #719949;
+}
+
+/* PANE TABS
+   ================================================== */
+
+/* Idle */
+
+/* CONTENT PANE
+   ================================================== */
+/*#globalNavPageContentArea, #contentPanel, #navigationPane {
+    height:auto !important;
+    min-height: 100%;
+}*/
+
+/*#globalNavPageContentArea {
+    height: unset !important;
+}*/
+
+.contentBox,
+.portal .contentBox {
+    border-color: #719949
+}
+
+/* @branding -- do not remove*/
+
+/*#contentArea,
+#schemePreviewBody {
+    background: #FFF;
+    border-color: #aaa;
+}
+
+.landingPageColumn .outcomesLanding li h3,
+.landingPageColumn p {
+    border-color: #C7C9C7;
+    color: #333;
+}*/
+
+.collapsible {
+    
+}
+
+/* PAGE HEADER
+   ================================================== */
+
+/* @branding -- do not remove*/
+
+/*#pageHeader,
+#schemePreviewHead {
+    background-color: #D7D2CB;
+} */
+
+.pageTitle {
+
+}
+
+/* CONTROL ELEMENTS
+   ================================================== */
+
+/* Action Bars */
+
+.actionBar,
+.actionBarMicro,
+    /*Side navigation single controls ("Unenroll" etc.)*/
+.singleControl,
+.navPalette .discover {
+    background-color: rgba(255, 205, 0, 0.75);
+    border-color: #FFCD00;
+    background-image: none;
+}
+
+/* Action bar main and secondary button links */
+.mainButton > a,
+.secondaryButton > a,
+.mainButton h2 > a,
+.secondaryButton h2 > a,
+.actionBar ul li a  {
+    font: 300 1em "Lucida Grande",Arial,sans-serif;
+    background: -moz-linear-gradient(center top , #266da5 0%, #236192 100%) #236192;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#266da5), to(#236192)) #236192;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#266da5, endColorstr=#236192";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#266da5, endColorstr=#236192);
+    border-color: #236192;
+    color: #fff;
+    text-shadow: 0 -1px 0 #222;
+}
+
+/*.menuWrap {
+    background: #fff;
+    border-color: #236192;
+}*/
+
+.actionBar ul li a:hover {
+    color: #fff;
+}
+
+/* Hover and focus */
+
+/* Action bar links */
+
+.actionBarMicro .active > a:after,
+a.liveAreaTab:after,
+.nav .sub h2 a:hover:after,
+.nav .sub.mainButton:hover h2 a:after,
+#loginLang h2:hover:after,
+#loginLang:hover h2:after {
+    border-bottom-color: #f0f0f0
+}
+
+.mainButton > a:hover,
+.mainButton h2 > a:hover,
+li.mainButton:hover > a,
+li.mainButton:hover h2 > a,
+.secondaryButton a:hover,
+li.secondaryButton:hover a,
+.actionBarMicro .active a,
+.actionBarMicro .active a:hover,
+.actionBarMicro .active a:focus,
+    /*Side nav single controls*/
+.singleControl a:hover,
+.singleControl a:focus,
+.discover a:hover,
+.discover a:focus,
+    /*Links in an "open" state*/
+.liveAreaTab,
+a.liveAreaTab,
+a.liveAreaTab:hover,
+a.liveAreaTab:focus,
+.actionBar ul li a.liveAreaTab:focus,
+.actionBar ul li.mainButton a.liveAreaTab,
+.actionBar ul li.secondaryButton a.liveAreaTab,
+.panelTabs li.active a.edit,
+.panelTabs li.active a.edit:hover,
+.panelTabs li.active a.edit:focus
+{
+    font: 300 1em "Lucida Grande",Arial,sans-serif;
+    background: -moz-linear-gradient(center top , #236192 0%, #266da5 100%) #266da5;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#236192), to(#266da5)) #266da5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#236192, endColorstr=#266da5";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#236192, endColorstr=#266da5);
+    border-color:#236192;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+    box-shadow: none;
+}
+
+.nav .sub ul,
+.cmdiv ul,
+.menumini ul,
+.quickAddPal,
+.keyboardAccess,
+.nav .sub ul li a,
+.cmdiv a,
+.menumini a,
+.paneTabs .nav .sub a,
+    /* tagging */
+span.currentTags,
+    /*span that appears on discussion pages that indicates "Loading Thread..." */
+.loadingElipse,
+    /* Inline editing elements */
+.liveArea,
+.liveArea-slim,
+.liveAreaTab,
+    /* Button is turned into liveArea tab when .liveaArea is displayed. */
+a.liveAreaTab,
+a.liveAreaTab:hover,
+a.liveAreaTab:focus,
+.previewArea,
+    /* Preview area (read-only version of live area) */
+.jumptopage,
+.panelTabs li.active a.edit,
+.panelTabs li.active a.edit:hover,
+.panelTabs li.active a.edit:focus,
+    /*Multi-column flyout*/
+.bcContent .flyout,
+    /*Overrides for the file hierarchy three*/
+ul.tree li a + img + a:focus,
+ul.tree li img + img + a:focus,
+div.treeContainer ul.tree li a.itemActive,
+#learningUnitToc ul.tree li a.itemActive,
+ul.tree li a.itemActive,
+    /* Menu borders. */
+.nav .sub ul,
+.cmdiv ul,
+.menumini ul,
+.quickAddPal,
+.keyboardAccess,
+.cmdiv,
+    /* contextual menu for tagging */
+span.currentTags,
+    /* Paging preference element */
+.rumble ul li.jumptopage,
+.rumble ul li.inventory_page.jumptopage,
+.rumble_top ul li.jumptopage,
+.rumble_top ul li.inventory_page.jumptopage,
+.inventory_paging input,
+.inventory_paging .currentPage,
+.jumptopage,
+.jumptopage input,
+    /* Close menu link */
+.cmdiv li.contextmenubar_top a,
+span.currentTags a.closeCloud,
+.cmdiv li.contextmenubar_top a:focus,
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud:hover,
+.currentTags a.closeCloud:focus,
+    /*Login page language list*/
+#loginLang ul  {
+    /* background-color: #f0f0f0;
+    border-color: #888; */
+}
+
+.cmdiv li.contextmenubar_top a:focus,
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud:hover,
+.currentTags a.closeCloud:focus {
+    /*background-color: #f0f0f0!important */
+}
+
+/*Tab indicators*/
+.portlet .containerTabs .active a:after {
+    /*border-bottom-color: #EEEEEE */
+}
+
+.course-availability-button.course-unavailable, .course-availability-button.course-available  {
+    background-color: rgba(255, 255, 255, .9);
+    background-size: 20px 25px;
+    background-position: center;
+    border-radius: 20px;
+}
+
+/* BUTTONS
+   ================================================== */
+
+/* @branding -- do not remove */
+#primaryButton,
+    /*===*/
+input[type="submit"].submit,
+.button-1,
+.button-1-img {
+
+    background: -moz-linear-gradient(center top , #266da5 0%, #236192 100%) #236192;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#266da5), to(#236192)) #236192;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#266da5, endColorstr=#236192";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#266da5, endColorstr=#236192);
+    color: #F0F0F0;
+    border-color: #236192;
+    font: 300 1em "Lucida Grande",Arial,sans-serif;
+    background-clip: padding-box;
+}
+
+input[type="submit"].submit:hover,
+.button-1:hover,
+.button-1:focus,
+.button-1-img:hover,
+.button-1-img:focus {
+    background: -moz-linear-gradient(center top , #236192 0%, #266da5 100%) #266da5;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#236192), to(#266da5)) #266da5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#236192, endColorstr=#266da5";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#236192, endColorstr=#266da5);
+    color: #FFFFFF;
+    border-color: #236192;
+    font: 300 1em "Lucida Grande",Arial,sans-serif;
+}
+
+#courseMenuPalette a:hover, #controlPanelPalette_contents a:hover, #courseMenuPalette span:hover, #controlPanelPalette_contents span:hover {
+    color: #ffcd00 !important;
+}
+.listCm .courseMenu a:focus span {
+    color: #ffcd00 !important;
+}
+
+.listCm .courseMenu a:hover span, .listCm .courseMenu a:focus span {
+    color: #ffcd00 !important;
+}
+
+/* PORTAL MODULES
+   ================================================== */
+
+/* @branding -- do not remove */
+#moduleBorder,
+#moduleBody,
+    /*===*/
+.portlet {
+    border-color: #236192;
+    background: #fff;
+}
+
+.portlet div.scroll_div {
+    background-color: #EEE;
+    border-color: #CCC;
+}
+
+/* Portlet on hover */
+.reorderableModule:hover {
+    border-color:#236192;
+}
+
+.reorderableModule:hover h2 {
+    color: #FFF;
+}
+/* Portlet Title */
+
+/* @branding -- do not remove */
+#moduleTitle,
+    /*===*/
+.portlet h2 {
+    background: #236192;
+    color: #FFF !important;
+    text-shadow: 1px 1px 1px #333333;
+    font: 300 1em "Lucida Grande",Arial,sans-serif;
+}
+
+/*  Portlet Title on hover */
+.portlet h2.dragHandle:hover {
+    text-shadow: 1px 1px 1px #D7D2CB;
+}
+
+.edit_controls a:hover:before {
+    color:#FFF;
+}
+/* RECEIPTS and ERRORS
+   ================================================== */
+
+.bad {
+    background-color: #A52818
+}
+
+.good {
+    background-color: #719949
+}
+
+.stepcontent .fieldError,
+.fieldError {
+    background-color: #EFDBB2
+}
+
+
+/* LOGIN PAGE
+   ================================================== */
+
+#loginHeader ul li,
+#loginLang h2 {
+}
+
+#loginBox li label,
+.portlet #loginBoxFull li label {
+    color: #666
+}
+
+div.loginBack b {
+    background-color: #fff
+}
+
+#loginBox li input[type="text"],
+#loginBox li input[type="password"] {
+    border-color: #888
+}
+
+#loginBox li input[type="text"]:hover,
+#loginBox li input[type="password"]:hover,
+#loginBox li input[type="text"]:focus,
+#loginBox li input[type="password"]:focus {
+    border-color: #719949;
+    color: #000;
+    background: #FFF;
+}
+
+#loginOptions ul li a,
+#loginOptions ul li.subOption a,
+.forgot a {
+    border-bottom-color: #719949
+}
+
+
+/*Login page top controls links */
+#loginHeader ul li a:hover,
+#loginHeader ul li a:focus,
+#loginLang h2:hover {
+
+}
+
+#loginHeader ul li:hover,
+#loginLang h2:hover {
+}
+
+
+/* INVENTORY TABLES
+   ================================================== */
+
+/* Color for zebra stripes */
+table.inventory tbody tr.gray td,
+table.inventory tbody tr.gray th {
+    background-color: #f0f0f0
+}
+
+
+/* REORDER HANDLES
+   ================================================== */
+
+.reorder,
+.item .reorder {
+    background-color: #FFCD00
+}
+
+
+/* DATA COLLECTION PAGES
+   ================================================== */
+
+.steptitle,
+.submittitle {
+    color: #000000
+}
+
+
+/* READ/EDIT MODE SWITCH
+   ================================================== */
+
+/*  Miscellaneous styles Override
+   ================================================== */
+ /*#quick_links_wrap {
+    display: none;
+}*/
+
+.locationPane {
+    height: 100%;
+}
