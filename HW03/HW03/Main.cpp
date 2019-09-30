@@ -12,11 +12,13 @@ using std::cin;
 using std::endl;
 
 
+
 // Creates the full line of asterisks that apears on the top and bottom of the box
 void bar(int & size) {
 	for (int i = 0; i < size; i++){
 		cout << "*";
 	}
+
 	cout << endl;
 }
 
@@ -44,10 +46,37 @@ void SpaceBar(int& size) {
 	}
 }
 
+void TopHalf(int& Isize, int & StringSize) {
+	int TotalLength = StringSize + (Isize * 2) + 2;
+	for (int i = 0; i < Isize; i++){
+		for (int i = 0; i < TotalLength; i++) {
+				cout << "*";
+		}
+		cout << endl;
+	}
+
+	for (int i = 0; i < Isize; i++) {
+		cout << "*";
+	}
+	cout << " ";
+
+	for (int i = 0; i < StringSize; i++) {
+		cout << " ";
+	}
+
+	cout << " ";
+	for (int i = 0; i < Isize; i++) {
+		cout << "*";
+	}
+	cout << endl;
+}
+
+
 // called by main; prompts for the string and size of the bar, then uses the other functions to create the box itself
 void create() {
 	int Isize = 0;
 	std::string BoxContents;
+	
 
 	cout << "Please enter a string: ";
 	cin >> BoxContents;
@@ -62,17 +91,10 @@ void create() {
 
 	// both of the integers are specifically for the size of the top bar and space bar
 	int BarSize = BoxContents.size() + (Isize * 2) + 2;
-	int SpaceSize = BoxContents.size();
-
+	int StringSize = BoxContents.size();
 	// this for loop, which also apears on the bottom ensures the correct number of bars are printed
-	for (int i = 0; i < Isize; i++) {
-		bar(BarSize);
-	}
-	LeftBar(Isize);
-
-	SpaceBar(SpaceSize);
-
-	RightBar(Isize);
+	
+	TopHalf(Isize, StringSize);
 
 	LeftBar(Isize);
 
@@ -82,7 +104,7 @@ void create() {
 
 	LeftBar(Isize);
 
-	SpaceBar(SpaceSize);
+	SpaceBar(StringSize);
 
 	RightBar(Isize);
 
