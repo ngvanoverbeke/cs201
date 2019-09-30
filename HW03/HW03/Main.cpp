@@ -29,7 +29,7 @@ void RightBar(int& size) {
 	cout << endl;
 }
 
-
+// creates top half of the box and uses LeftBar and RightBar functions to do so
 void TopHalf(int& Isize, int & StringSize) {
 	int TotalLength = StringSize + (Isize * 2) + 2;
 	for (int i = 0; i < Isize; i++){
@@ -48,6 +48,7 @@ void TopHalf(int& Isize, int & StringSize) {
 	RightBar(Isize);
 }
 
+// creates the bottom half of the box. Works in the same way as TopHalf, just with a different order
 void BottomHalf(int& Isize, int& StringSize) {
 	int TotalLength = StringSize + (Isize * 2) + 2;
 
@@ -85,7 +86,6 @@ void create() {
 	}
 
 	int StringSize = BoxContents.size();
-	// this for loop, which also apears on the bottom ensures the correct number of bars are printed
 	
 	TopHalf(Isize, StringSize);
 
