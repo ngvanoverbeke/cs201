@@ -39,39 +39,25 @@ void TopHalf(int& Isize, int & StringSize) {
 		cout << endl;
 	}
 
-	for (int i = 0; i < Isize; i++) {
-		cout << "*";
-	}
-	cout << " ";
+	LeftBar(Isize);
 
 	for (int i = 0; i < StringSize; i++) {
 		cout << " ";
 	}
 
-	cout << " ";
-	for (int i = 0; i < Isize; i++) {
-		cout << "*";
-	}
-	cout << endl;
+	RightBar(Isize);
 }
 
 void BottomHalf(int& Isize, int& StringSize) {
 	int TotalLength = StringSize + (Isize * 2) + 2;
 
-	for (int i = 0; i < Isize; i++) {
-		cout << "*";
-	}
-	cout << " ";
+	LeftBar(Isize);
 
 	for (int i = 0; i < StringSize; i++) {
 		cout << " ";
 	}
 
-	cout << " ";
-	for (int i = 0; i < Isize; i++) {
-		cout << "*";
-	}
-	cout << endl;
+	RightBar(Isize);
 	
 	for (int i = 0; i < Isize; i++) {
 		for (int i = 0; i < TotalLength; i++) {
