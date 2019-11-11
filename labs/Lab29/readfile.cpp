@@ -13,6 +13,7 @@
 // John Quan
 // For CS 201 Spring 2019
 
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -42,6 +43,24 @@ bool readFile(const string & filename) {
 	// TODO: If you can read the file,
 	//       While not at the end-of-file
 	//       Print each line of the file.
+	ifstream file(filename);
+		if (!file) {
+			return false;
+		}
+	while (true) {
+		string line;
+		getline(file, line);
+		if(!file) {
+			if (file.eof()){
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	cout << line << endl;
+	}
 
 	cout << filename;  // DUMMY output
 	return false;  // DUMMY return
