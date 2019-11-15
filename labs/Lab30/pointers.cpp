@@ -19,7 +19,10 @@ using std::cin;
 // Given a pointer to int, change the value pointed to.
 void changeInt(int * p)  // p points to value to change
 {
-    // WRITE THIS!!!
+   if (p != nullptr )
+   {
+       * p = 2;
+   }
 }
 
 
@@ -36,6 +39,11 @@ int main()
     int * ip;
 
     // *** HERE, ADD CODE THAT USES ip to modify variables ss and tt
+
+    ip = &ss;
+    --(*ip);
+    ip = &tt;
+    ++(*ip);
 
     cout << "AFTER USING ip" << endl;
     cout << "Value of ss: " << ss << endl;
