@@ -9,6 +9,8 @@
 #include <algorithm>
 #include <map>
 #include <random>
+#include <stdlib.h>
+#include <time.h>
 
 using std::begin;
 using std::end;
@@ -25,14 +27,23 @@ std::vector<std::vector<char>> victor{
     {'f','o','a','l'},
     {'f','o','u','l'}};
 
-std::vector<char> bird;
+std::vector<char> gameWord;
+std::vector<char> userGuess{
+    '_', '_', '_', '_', 
+};
+
+
+void failedAttempt(){
+    // this function will print the current hangman graphic based on number of past 
+}
+
 
 // takes input of a letter from the user and checks if they have tried it yet
 void userInput(){
     char inputChar;
     std::cin >> inputChar;
-    auto temp = find(begin(charInventory), end(charInventory), inputChar);
-    if (temp == end(charInventory)){
+    auto tempI = find(begin(charInventory), end(charInventory), inputChar);
+    if (tempI == end(charInventory)){
         std::cout << std::endl << "Hey dummy, you already tried that! Try something different." << std::endl;
         userInput();
     }
@@ -42,12 +53,21 @@ void userInput(){
 
     charInventory.insert(charPair);
     
+    auto tempW = find(begin(gameWord), end(gameWord), inputChar);
+    if (tempW == end(gameWord)){
+        std::cout << std::endl << "WRONG!!" << std::endl;
+        failedAttempt();
+    }
+    int position = tempW - begin(gameWord);
+    userGuess[position] = inputChar;
 }
 
-void failedAttempt(){
-    // this function will print the current hangman graphic based on number of past 
-}
+
 
 int main(){
-    
+    srand(time(NULL));
+    int gameSeed = std::rand() % 6;
+    gameWord = victor[gameSeed];
+
+    userInput();
 }
