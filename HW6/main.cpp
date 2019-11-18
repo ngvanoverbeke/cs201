@@ -36,6 +36,7 @@ void PrintDistribution(const std::map <int, int> &hist){
 
 int main()
 {
+    srand(time(NULL));
     std::map<int, int> histN;
     for (int n = 0; n < 50000; ++n) {
         ++histN[RandomBetweenN(1, 6)];
