@@ -40,26 +40,31 @@ void failedAttempt(){
 
 // takes input of a letter from the user and checks if they have tried it yet
 void userInput(){
+    std::cout << "Hey you! Yeah you. Guess a letter!" << std::endl;
     char inputChar;
     std::cin >> inputChar;
-    auto tempI = find(begin(charInventory), end(charInventory), inputChar);
-    if (tempI == end(charInventory)){
-        std::cout << std::endl << "Hey dummy, you already tried that! Try something different." << std::endl;
-        userInput();
-    }
-
     charPair.first = inputChar;
     charPair.second = true;
 
-    charInventory.insert(charPair);
-    
-    auto tempW = find(begin(gameWord), end(gameWord), inputChar);
-    if (tempW == end(gameWord)){
-        std::cout << std::endl << "WRONG!!" << std::endl;
-        failedAttempt();
+    auto tempI = charInventory.find(inputChar);
+    if (tempI != charInventory.end()){
+        std::cout << std::endl << "Hey dummy, you already tried that! Try something different." << std::endl;
     }
-    int position = tempW - begin(gameWord);
-    userGuess[position] = inputChar;
+    else
+    {
+        charInventory.insert(charPair);
+        
+        auto tempW = find(begin(gameWord), end(gameWord), inputChar);
+        if (tempW == end(gameWord)){
+            std::cout << std::endl << "WRONG!!" << std::endl;
+            failedAttempt();
+            return;
+        }
+        int position = std::distance(gameWord.begin(), tempW);
+        userGuess[position] = inputChar;
+
+        std::cout << std::endl << "What manner of man are you, to guess a letter in the word without prior knowledge?! (correct)" << std::endl;
+    }
 }
 
 
@@ -68,6 +73,13 @@ int main(){
     srand(time(NULL));
     int gameSeed = std::rand() % 6;
     gameWord = victor[gameSeed];
-
-    userInput();
+    bool playing = (std::equal(gameWord.begin(), gameWord.end(), userGuess.begin()));
+    while (!playing)
+    {
+        userInput();
+        playing = (std::equal(gameWord.begin(), gameWord.end(), userGuess.begin()));
+    }
+    
+    std::cout << "You won. Now, for something completely different." << std::endl;
+    
 }
