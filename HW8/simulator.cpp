@@ -38,17 +38,16 @@ void simulator::run() {
 // this is where all interaction with the user takes place
 void simulator::askOwner() {
 	if (count > 2){
-		std::cout << "would you like to exit? (enter 0 for no and 1 for yes):	";
-		int yesNo;
+		std::cout << "would you like to exit? (if yes, \"y\", or \"n\" for no):	";
+		char yesNo;
 		std::cin >> yesNo;
-		if (yesNo == 1) { EXIT_SUCCESS; }
+		if ((yesNo == 'y') || (yesNo == 'Y')) { std::cout << "Goodbye!"; exit(0); }
 	}
 
 	std::cout << "Would you like to change the thermostat? (if yes, \"Y\", or \"N\" for no): ";
 	char yesNo;
 	std::cin >> yesNo;
-	if ((yesNo == 'y') || (yesNo == 'Y'))
-	{	
+	if ((yesNo == 'y') || (yesNo == 'Y')) {	
 		std::cout << "Please enter the temperature you would like to set the thermostat to:  ";
 		std::cin >> agent.tempSet;
 	}

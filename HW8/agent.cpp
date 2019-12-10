@@ -12,24 +12,20 @@ void agent::perceive(enviroment& env) {
 
 // uses the information pulled down by agent.percieve to find the correct course of action
 void agent::think() {
-	if (temp >= tempSet)
-	{
+	if (temp >= tempSet){
 		turnOn = false;
 	}
-	else
-	{
+	else{
 		turnOn = true;
 	}
 }
 
 // uses a boolean value decided by angent.think to decide what to do
 void agent::act(enviroment& env) {
-	if (turnOn)
-	{
+	if (turnOn){
 		env.heater = true;
 	}
-	else
-	{
+	else{
 		env.heater = false;
 	}
 }
