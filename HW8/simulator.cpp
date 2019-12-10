@@ -19,11 +19,15 @@ void simulator::run() {
 	askOwner();
 
 	while (exit == false) {
-		if (count % 10 == 0) {
+		std::cout << "The temperature is: " << env.temperature << "		And the thermostat is set to: " << agent.tempSet << std::endl;
+		if (count % 10 == 0 && count > 1) {
 			askOwner();
 		}
-		count++;
+		agent.perceive(env);
+		agent.think();
+		agent.act(env);
 		env.iteration();
+		count++;
 	}
 }
 
@@ -35,7 +39,7 @@ void simulator::askOwner() {
 		if (yesNo == 1) { exit = true; }
 	}
 
-	if (exit == false) {
+	if (exit == false && count % 10 != 0) {
 		std::cout << "The temperature is currently: "<< env.temperature << "\nand the thermostat is set to: " << agent.tempSet << std::endl;
 	}
 	std::cout << "Would you like to change the thermostat? (if yes, \"Y\", or \"N\" for no): ";

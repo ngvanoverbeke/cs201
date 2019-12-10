@@ -2,7 +2,7 @@
 // CS201
 // 12/8/19
 // handles the header data for enviroment.cpp
-
+#pragma once
 class enviroment {
 	public:
 		bool heater = false;
