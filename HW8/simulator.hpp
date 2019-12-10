@@ -11,8 +11,11 @@
 class simulator {
 public:
 	int count = 0;
+
 	void run();
 	void askOwner();
+
+	// these are local instances of the given classes so that they can be used/accessed
 	enviroment env;
 	agent agent;
 };

@@ -5,10 +5,12 @@
 
 #include "Agent.hpp"
 
+// pulls the current tempurature down and stores it in the class locally (but globaly)
 void agent::perceive(enviroment& env) {
 	temp = env.temperature;
 }
 
+// uses the information pulled down by agent.percieve to find the correct course of action
 void agent::think() {
 	if (temp >= tempSet)
 	{
@@ -20,6 +22,7 @@ void agent::think() {
 	}
 }
 
+// uses a boolean value decided by angent.think to decide what to do
 void agent::act(enviroment& env) {
 	if (turnOn)
 	{
