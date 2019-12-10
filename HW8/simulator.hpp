@@ -10,7 +10,6 @@
 
 class simulator {
 public:
-	bool exit = false;
 	int count = 0;
 	void run();
 	void askOwner();

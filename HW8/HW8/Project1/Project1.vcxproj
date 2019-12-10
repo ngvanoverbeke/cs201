@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\agent.cpp" />
-    <ClCompile Include="..\..\enviroment.cpp" />
     <ClCompile Include="..\..\main.cpp" />
     <ClCompile Include="..\..\simulator.cpp" />
   </ItemGroup>
