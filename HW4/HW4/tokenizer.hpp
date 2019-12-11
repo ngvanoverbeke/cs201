@@ -7,5 +7,5 @@
 #include <algorithm>
 
 bool readLine(std::string & str);
-//unsigned stringToTokenWS(std::vector<std::string>& tokens);
+unsigned int stringToTokenWS(const std::string& input, std::vector<std::string>& tokens);
 void AnalyzeTokens(const std::vector<std::string>& tokens);
