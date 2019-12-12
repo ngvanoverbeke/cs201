@@ -8,12 +8,14 @@
 std::random_device r;
 std::default_random_engine e1(r());
 
+// returns a uniform distribution of random numbers within the given range
 int RandomBetweenU(int first, int last){
     std::uniform_int_distribution<int> uniform_dist(first, last);
     int mean = uniform_dist(e1);
     return mean;
 }
 
+// returns a normal distribution of random numbers within the given range
 int RandomBetweenN(int first, int last){
     std::uniform_int_distribution<int> uniform_dist(first, last);
     int mean = uniform_dist(e1);
@@ -23,10 +25,12 @@ int RandomBetweenN(int first, int last){
     return std::round(normal_dist(e2));
 }
 
+// sources random numbers
 int RandomBetween(int first, int last){
     return std::rand() % last + 1;
 }
 
+// outputs a list of the random numbers to show how they are diistributed
 void PrintDistribution(const std::map <int, int> &hist){
     for (auto p : hist) {
         std::cout << std::fixed << std::setprecision(1) << std::setw(2)
