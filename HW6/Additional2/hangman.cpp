@@ -30,7 +30,33 @@ std::vector<std::vector<char>> victor{
     {'f','a','i','l'},
     {'f','o','r','d'},
     {'f','o','a','l'},
-    {'f','o','u','l'}};
+    {'f','o','u','l'},
+    {'t','i','m','e'},
+    {'m','a','i','d'},
+    {'n','e','w','s'},
+    {'b','o','n','d'},
+    {'p','u','m','p'},
+    {'t','i','c','k'},
+    {'h','a','n','g'},
+    {'s','a','n','d'},
+    {'d','e','s','k'},
+    {'t','e','a','m'},
+    {'r','a','i','n'},
+    {'g','e','a','r'},
+    {'m','a','k','e'},
+    {'m','a','z','e'},
+    {'r','i','c','e'},
+    {'f','e','e','l'},
+    {'t','h','i','n'},
+    {'w','i','f','e'},
+    {'l','o','c','k'},
+    {'f','i','l','l'},
+    {'f','i','l','e'},
+    {'k','n','e','e'},
+    {'w','a','g','e'},
+    {'h','u','r','l'},
+
+    };
 
 std::vector<char> gameWord;
 std::vector<char> userGuess{
@@ -77,7 +103,7 @@ void userInput(){
 
 int main(){
     srand(time(NULL));
-    int gameSeed = std::rand() % 6; // NOTE: to add more words, simply make sure this number (6 by default) matches the number of words you have!
+    int gameSeed = std::rand() % 30; // NOTE: to add more words, simply make sure this number (6 by default(now 30!)) matches the number of words you have!
     gameWord = victor[gameSeed];
     bool playing = (std::equal(gameWord.begin(), gameWord.end(), userGuess.begin()));
 
