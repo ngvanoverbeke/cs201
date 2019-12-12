@@ -1,3 +1,8 @@
+// Nathan VanOverbeke
+// CS201
+// 12/12/2019
+// This program will show how different types of random number distribution look when put on a histogram
+
 #include <iostream>
 #include <iomanip>
 #include <string>
